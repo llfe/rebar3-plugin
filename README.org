@@ -1,0 +1,38 @@
+#+STARTUP: showall
+#+OPTIONS: title:t author:t date:t ^:{} toc:nil
+#+TITLE: LLFE Rebar3 Plugin
+#+AUTHOR: Eric Bailey
+#+DATE: <2016-02-25 Thu>
+
+A [[https://www.rebar3.org][rebar3]] plugin for tangling Literate LFE (=.llfe=) files using [[https://github.com/llfe/llfe][llfe]].
+
+* Roadmap
+** TODO Implement LLFE as a library
+** TODO Provide a ~tangle~ task
+** TODO Provide a ~clean~ task
+** TODO Tag releases
+*** TODO Update [[Usage]] section to refect tags
+** LATER Add (more/better/literate?) documentation
+** SOMEDAY Add "realistic" example usage
+
+* Usage
+Add the plugin to your =rebar.config=:
+#+BEGIN_SRC erlang
+{plugins,
+ [{llfe,
+   {git, "git://github.com/llfe/rebar3-plugin.git",
+    {branch, "master"}}}]}.
+#+END_SRC
+
+Add a hook to automatically tangle =.llfe= files before ~compile~.
+#+BEGIN_SRC erlang
+{provider_hooks, [{pre, [{compile, {llfe, tangle}}]}]}.
+#+END_SRC
+
+Add a hook to automatically remove tangled Literate LFE files:
+#+BEGIN_SRC erlang
+{provider_hooks, [{post, [{clean, {llfe, clean}}]}]}.
+#+END_SRC
+
+* License
+[[http://unlicense.org][The Unlicense]]
