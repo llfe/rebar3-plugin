@@ -7,13 +7,13 @@
 A [[https://www.rebar3.org][rebar3]] plugin for tangling Literate LFE (=.llfe=) files using [[https://github.com/llfe/llfe][llfe]].
 
 * Roadmap
-** TODO Implement LLFE as a library
-** TODO Provide a ~tangle~ task
-** TODO Provide a ~clean~ task
-** TODO Tag releases
-*** TODO Update [[Usage]] section to refect tags
-** LATER Add (more/better/literate?) documentation
-** SOMEDAY Add "realistic" example usage
+- Implement LLFE as a library
+- Provide a ~tangle~ task
+- Provide a ~clean~ task
+- Tag releases
+- Update Usage section to refect tags
+- Add (more/better/literate?) documentation
+- Add "realistic" example usage
 
 * Usage
 Add the plugin to your =rebar.config=:
