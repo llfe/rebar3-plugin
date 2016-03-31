@@ -7,7 +7,7 @@
 A [[https://www.rebar3.org][rebar3]] plugin for tangling Literate LFE (=.llfe=) files using [[https://github.com/llfe/llfe][llfe]].
 
 * Roadmap
-- Implement LLFE as a library
+- Implement LLFE as ar library
 - Provide a ~tangle~ task
 - Provide a ~clean~ task
 - Tag releases
@@ -18,7 +18,7 @@ A [[https://www.rebar3.org][rebar3]] plugin for tangling Literate LFE (=.llfe=) 
 * Usage
 Add the plugin to your =rebar.config=:
 #+BEGIN_SRC erlang
-{plugins,
+{project_plugins,
  [{llfe,
    {git, "git://github.com/llfe/rebar3-plugin.git",
     {branch, "master"}}}]}.
